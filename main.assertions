@@ -1,0 +1,6 @@
+csp InspectDoor associated to RemoteInspectionModule
+	csp-begin
+		InspectDoor = RemoteInspectionModule::inspectCall -> RUN(Events) [] RemoteInspectionModule::radiation_level.in?x -> RUN(Events)
+	csp-end
+	
+assertion TestReq:RemoteInspectionModule refines InspectDoor in the traces model

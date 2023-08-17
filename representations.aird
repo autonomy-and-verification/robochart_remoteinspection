@@ -15,10 +15,6 @@
     <semanticResources>main.assertions</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_1kdrgDs-Ee6_DvmQ3bgp_w">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_0N_D8DtCEe6_DvmQ3bgp_w" name="remote_inspection_controller" repPath="#_0N-c4DtCEe6_DvmQ3bgp_w" changeId="50f31e05-5f5b-4fb4-b86c-71af6fb42ace">
-        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']"/>
-        <target xmi:type="robochart:RCPackage" href="remote_inspection_controller.rct#/"/>
-      </ownedRepresentationDescriptors>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_miGbYDtFEe6b3bTu3d-UZw" name="remote_inpsection_model.rct" repPath="#_miEmMDtFEe6b3bTu3d-UZw" changeId="909040e9-39bd-4edf-b281-287146a56e46">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']"/>
         <target xmi:type="robochart:RCPackage" href="remote_inpsection_model.rct#/"/>
@@ -41,38 +37,6 @@
       </ownedRepresentationDescriptors>
     </ownedViews>
   </viewpoint:DAnalysis>
-  <diagram:DSemanticDiagram uid="_0N-c4DtCEe6_DvmQ3bgp_w">
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_0N_D8jtCEe6_DvmQ3bgp_w" source="GMF_DIAGRAMS">
-      <data xmi:type="notation:Diagram" xmi:id="_0N_D8ztCEe6_DvmQ3bgp_w" type="Sirius" element="_0N-c4DtCEe6_DvmQ3bgp_w" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_0OASEztCEe6_DvmQ3bgp_w" type="2003" element="_0N_rADtCEe6_DvmQ3bgp_w">
-          <children xmi:type="notation:Node" xmi:id="_0OASFjtCEe6_DvmQ3bgp_w" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_0OASFztCEe6_DvmQ3bgp_w" type="7004">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_0OASGDtCEe6_DvmQ3bgp_w"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_0OASGTtCEe6_DvmQ3bgp_w"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_0OASFDtCEe6_DvmQ3bgp_w" fontName=".AppleSystemUIFont" fontHeight="10" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0OASFTtCEe6_DvmQ3bgp_w"/>
-        </children>
-        <styles xmi:type="notation:DiagramStyle" xmi:id="_0N_D9DtCEe6_DvmQ3bgp_w"/>
-      </data>
-    </ownedAnnotationEntries>
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_0OASETtCEe6_DvmQ3bgp_w" source="DANNOTATION_CUSTOMIZATION_KEY">
-      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_0OASEjtCEe6_DvmQ3bgp_w"/>
-    </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_0N_rADtCEe6_DvmQ3bgp_w" name="imports" width="20" height="10">
-      <target xmi:type="robochart:RCPackage" href="remote_inspection_controller.rct#/"/>
-      <semanticElements xmi:type="robochart:RCPackage" href="remote_inspection_controller.rct#/"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_0N_rATtCEe6_DvmQ3bgp_w" labelSize="10" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
-        <labelFormat>bold</labelFormat>
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@containerMappings[name='ImportsID']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@containerMappings[name='ImportsID']"/>
-    </ownedDiagramElements>
-    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']"/>
-    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_0N-c4TtCEe6_DvmQ3bgp_w"/>
-    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer"/>
-    <target xmi:type="robochart:RCPackage" href="remote_inspection_controller.rct#/"/>
-  </diagram:DSemanticDiagram>
   <diagram:DSemanticDiagram uid="_miEmMDtFEe6b3bTu3d-UZw">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_miKFwDtFEe6b3bTu3d-UZw" source="GMF_DIAGRAMS">
       <data xmi:type="notation:Diagram" xmi:id="_miKFwTtFEe6b3bTu3d-UZw" type="Sirius" element="_miEmMDtFEe6b3bTu3d-UZw" measurementUnit="Pixel">
