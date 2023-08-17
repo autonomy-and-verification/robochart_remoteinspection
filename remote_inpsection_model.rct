@@ -14,7 +14,11 @@ interface InspectionInterface {
 	inspect ( )
 }
 
+interface NumberOfWaypointsI {
+	const number_of_waypoints : nat
+}
+
 robotic platform JackalPlatform {
-	uses RadiationSensorInterface uses LocalisationInterface provides MovementInterface provides InspectionInterface }
+	uses RadiationSensorInterface uses LocalisationInterface provides MovementInterface provides InspectionInterface provides NumberOfWaypointsI }
 
 function waypoint ( coord : nat * nat ) : nat { } function waypoint_inverse ( wp : nat ) : nat * nat { }
