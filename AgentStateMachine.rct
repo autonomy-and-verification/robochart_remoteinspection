@@ -18,7 +18,9 @@ stm Agent {
 	transition t2 {
 		from PollingPerceptsMessages
 		to j0
-		trigger arrived ? CurrentPosition
+		trigger 
+	arrived ? CurrentPosition
+		condition CurrentPosition != waypoint_inverse ( 0 )
 	}
 	transition t3 {
 		from j0
@@ -35,6 +37,7 @@ stm Agent {
 	transition t5 {
 		from j1
 		to PollingPerceptsMessages
+		condition CurrentWaypoint <= number_of_waypoints
 		action goto ! ( waypoint_inverse ( CurrentWaypoint ) )
 	}
 var CurrentWaypoint : nat
@@ -46,7 +49,21 @@ junction j1
 	}
 	transition t0 {
 		from i0
-		to Inspect
+		to s0
+	}
+	requires NumberOfWaypointsI state s0 {
+	}
+	transition t7 {
+		from s0
+		to PollingPerceptsMessages
+		trigger RadiationLevel ? RadiationBelief
+		action goto ! waypoint_inverse ( 1 )
+	}
+	transition t8 {
+		from j1
+		to PollingPerceptsMessages
+		condition CurrentWaypoint == number_of_waypoints
+		action goto ! waypoint_inverse ( 0 )
 	}
 }
 

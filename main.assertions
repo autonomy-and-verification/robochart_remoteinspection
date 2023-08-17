@@ -4,3 +4,10 @@ csp InspectDoor associated to RemoteInspectionModule
 	csp-end
 	
 assertion TestReq:RemoteInspectionModule refines InspectDoor in the traces model
+
+csp CheckRadiation associated to RemoteInspectionModule
+	csp-begin
+		CheckRadiation = RemoteInspectionModule::radiation_level.in?x -> RUN(Events)
+	csp-end
+
+assertion RL:RemoteInspectionModule refines CheckRadiation in the traces model
