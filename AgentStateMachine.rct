@@ -20,7 +20,7 @@ stm Agent {
 		to j0
 		trigger 
 	arrived ? CurrentPosition
-		condition CurrentPosition != waypoint_inverse ( 0 )
+		condition CurrentPosition != waypoint_inverse ( CurrentWaypoint )
 	}
 	transition t3 {
 		from j0
@@ -32,7 +32,7 @@ stm Agent {
 		from j0
 		to PollingPerceptsMessages
 		condition RadiationBelief != DangerLevel :: Green
-		action goto ! ( waypoint_inverse ( 0 ) )
+		action goto ! ( waypoint_inverse ( 0 ) ) ; CurrentWaypoint = 0
 	}
 	transition t5 {
 		from j1
@@ -57,13 +57,13 @@ junction j1
 		from s0
 		to PollingPerceptsMessages
 		trigger RadiationLevel ? RadiationBelief
-		action goto ! waypoint_inverse ( 1 )
+		action goto ! waypoint_inverse ( 1 ) ; CurrentWaypoint = 1
 	}
 	transition t8 {
 		from j1
 		to PollingPerceptsMessages
 		condition CurrentWaypoint == number_of_waypoints
-		action goto ! waypoint_inverse ( 0 )
+		action goto ! waypoint_inverse ( 0 ) ; CurrentWaypoint = 0
 	}
 }
 

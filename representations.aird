@@ -27,11 +27,11 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']"/>
         <target xmi:type="robochart:RCPackage" href="remote_inspection_module.rct#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_px6-oDtLEe6b3bTu3d-UZw" name="NavigationStateMachine" repPath="#_px6XkDtLEe6b3bTu3d-UZw" changeId="f7fff511-de3e-4d3a-9fe4-b145411bae32">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_px6-oDtLEe6b3bTu3d-UZw" name="NavigationStateMachine" repPath="#_px6XkDtLEe6b3bTu3d-UZw" changeId="46f8ab38-472d-40bd-b954-44e023f270dd">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']"/>
         <target xmi:type="robochart:RCPackage" href="NavigationStateMachine.rct#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_r8mUMDtQEe6b3bTu3d-UZw" name="AgentStateMachine" repPath="#_r8ltIDtQEe6b3bTu3d-UZw" changeId="74348cb4-90ad-4d3f-adb7-2640ee707f5e">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_r8mUMDtQEe6b3bTu3d-UZw" name="AgentStateMachine" repPath="#_r8ltIDtQEe6b3bTu3d-UZw" changeId="0d674d06-41a8-4584-96e1-0036a10cb33c">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']"/>
         <target xmi:type="robochart:RCPackage" href="AgentStateMachine.rct#/"/>
       </ownedRepresentationDescriptors>
@@ -1815,7 +1815,7 @@
                 <styles xmi:type="notation:DrawerStyle" xmi:id="_q5ecnjtLEe6b3bTu3d-UZw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_q5ecmDtLEe6b3bTu3d-UZw" fontName=".AppleSystemUIFont" fontHeight="1"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q5ecmTtLEe6b3bTu3d-UZw" width="827" height="329"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q5ecmTtLEe6b3bTu3d-UZw" y="97" width="827" height="273"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_2-7LcztLEe6b3bTu3d-UZw" type="3009" element="_2-twFDtLEe6b3bTu3d-UZw">
               <children xmi:type="notation:Node" xmi:id="_2-7LdjtLEe6b3bTu3d-UZw" visible="false" type="5004"/>
@@ -2570,7 +2570,7 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_3WtvgDzvEe69u6lr9254XA" type="4001" element="_3Wd3_DzvEe69u6lr9254XA" source="_un10gDznEe69u6lr9254XA" target="_ubNrsDtQEe6b3bTu3d-UZw">
           <children xmi:type="notation:Node" xmi:id="_3WtvhDzvEe69u6lr9254XA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3WtvhTzvEe69u6lr9254XA" x="8" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3WtvhTzvEe69u6lr9254XA" x="-34" y="9"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_3WtvhjzvEe69u6lr9254XA" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3WtvhzzvEe69u6lr9254XA" x="2" y="-10"/>
@@ -2880,7 +2880,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@edgeMappings[name='TransitionID']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Dq4R9jtSEe6Fk-AC4O00PA" name="arrived?CurrentPosition[CurrentPosition!=waypoint_inverse(0)]" sourceNode="_uazcADtQEe6b3bTu3d-UZw" targetNode="_IfzZgDtSEe6Fk-AC4O00PA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Dq4R9jtSEe6Fk-AC4O00PA" name="arrived?CurrentPosition[CurrentPosition!=waypoint_inverse(CurrentWaypoint)]" sourceNode="_uazcADtQEe6b3bTu3d-UZw" targetNode="_IfzZgDtSEe6Fk-AC4O00PA">
       <target xmi:type="robochart:Transition" href="AgentStateMachine.rct#//@machines.0/@transitions.1"/>
       <semanticElements xmi:type="robochart:Transition" href="AgentStateMachine.rct#//@machines.0/@transitions.1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Dq4R9ztSEe6Fk-AC4O00PA" size="2" routingStyle="manhattan">
@@ -2898,7 +2898,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@edgeMappings[name='TransitionID']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_arxawDtSEe6Fk-AC4O00PA" name="[RadiationBelief!=DangerLevel::Green]/goto!(waypoint_inverse(0))" sourceNode="_IfzZgDtSEe6Fk-AC4O00PA" targetNode="_uazcADtQEe6b3bTu3d-UZw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_arxawDtSEe6Fk-AC4O00PA" name="[RadiationBelief!=DangerLevel::Green]/goto!(waypoint_inverse(0)); CurrentWaypoint = 0" sourceNode="_IfzZgDtSEe6Fk-AC4O00PA" targetNode="_uazcADtQEe6b3bTu3d-UZw">
       <target xmi:type="robochart:Transition" href="AgentStateMachine.rct#//@machines.0/@transitions.3"/>
       <semanticElements xmi:type="robochart:Transition" href="AgentStateMachine.rct#//@machines.0/@transitions.3"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_aryBwDtSEe6Fk-AC4O00PA" size="2" routingStyle="manhattan">
@@ -2934,7 +2934,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@edgeMappings[name='TransitionID']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_3Wd3_DzvEe69u6lr9254XA" name="RadiationLevel?RadiationBelief/goto!waypoint_inverse(1)" sourceNode="_um-44DznEe69u6lr9254XA" targetNode="_uazcADtQEe6b3bTu3d-UZw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_3Wd3_DzvEe69u6lr9254XA" name="RadiationLevel?RadiationBelief/goto!waypoint_inverse(1); CurrentWaypoint = 1" sourceNode="_um-44DznEe69u6lr9254XA" targetNode="_uazcADtQEe6b3bTu3d-UZw">
       <target xmi:type="robochart:Transition" href="AgentStateMachine.rct#//@machines.0/@transitions.7"/>
       <semanticElements xmi:type="robochart:Transition" href="AgentStateMachine.rct#//@machines.0/@transitions.7"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_3Wd3_TzvEe69u6lr9254XA" size="2" routingStyle="manhattan">
@@ -2943,7 +2943,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@edgeMappings[name='TransitionID']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Q4WE4DzyEe69u6lr9254XA" name="[CurrentWaypoint==number_of_waypoints]/goto!waypoint_inverse(0)" sourceNode="_Ya0b8DwnEe6q87XSBWsHJw" targetNode="_uazcADtQEe6b3bTu3d-UZw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Q4WE4DzyEe69u6lr9254XA" name="[CurrentWaypoint==number_of_waypoints]/goto!waypoint_inverse(0); CurrentWaypoint = 0" sourceNode="_Ya0b8DwnEe6q87XSBWsHJw" targetNode="_uazcADtQEe6b3bTu3d-UZw">
       <target xmi:type="robochart:Transition" href="AgentStateMachine.rct#//@machines.0/@transitions.8"/>
       <semanticElements xmi:type="robochart:Transition" href="AgentStateMachine.rct#//@machines.0/@transitions.8"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Q4Wr0DzyEe69u6lr9254XA" size="2" routingStyle="manhattan">
