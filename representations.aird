@@ -15,11 +15,11 @@
     <semanticResources>main.assertions</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_1kdrgDs-Ee6_DvmQ3bgp_w">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_miGbYDtFEe6b3bTu3d-UZw" name="remote_inpsection_model.rct" repPath="#_miEmMDtFEe6b3bTu3d-UZw" changeId="58089429-5cca-4b53-a10e-5d9c95ade89f">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_miGbYDtFEe6b3bTu3d-UZw" name="remote_inpsection_model.rct" repPath="#_miEmMDtFEe6b3bTu3d-UZw" changeId="37de507d-63be-478a-ac4f-68af6135cedd">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']"/>
         <target xmi:type="robochart:RCPackage" href="remote_inpsection_model.rct#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_MvcgMDtGEe6b3bTu3d-UZw" name="remote_inspection_controller" repPath="#_Mvb5IDtGEe6b3bTu3d-UZw" changeId="95f4ce85-bdc4-4c6a-9e75-242b770e70a2">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_MvcgMDtGEe6b3bTu3d-UZw" name="remote_inspection_controller" repPath="#_Mvb5IDtGEe6b3bTu3d-UZw" changeId="2c471a47-09af-4bf0-bc97-2f4addafd4e3">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']"/>
         <target xmi:type="robochart:RCPackage" href="remote_inspection_controller.rct#/"/>
       </ownedRepresentationDescriptors>
@@ -124,6 +124,10 @@
             <children xmi:type="notation:Node" xmi:id="_mliJ4ztFEe6b3bTu3d-UZw" type="3010" element="_mlXKwztFEe6b3bTu3d-UZw">
               <styles xmi:type="notation:FontStyle" xmi:id="_mliJ5DtFEe6b3bTu3d-UZw" fontName=".AppleSystemUIFont" fontHeight="10"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_mliJ5TtFEe6b3bTu3d-UZw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ATZPQDzzEe69u6lr9254XA" type="3010" element="_ATWL_TzzEe69u6lr9254XA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_ATZPQTzzEe69u6lr9254XA" fontName=".AppleSystemUIFont" fontHeight="10"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_ATZPQjzzEe69u6lr9254XA"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_mliJ5jtFEe6b3bTu3d-UZw" type="3010" element="_mlYY4DtFEe6b3bTu3d-UZw">
               <styles xmi:type="notation:FontStyle" xmi:id="_mliJ5ztFEe6b3bTu3d-UZw" fontName=".AppleSystemUIFont" fontHeight="10"/>
@@ -305,6 +309,14 @@
         <target xmi:type="robochart:Interface" href="remote_inpsection_model.rct#//@interfaces.3"/>
         <semanticElements xmi:type="robochart:Interface" href="remote_inpsection_model.rct#//@interfaces.3"/>
         <ownedStyle xmi:type="diagram:Square" uid="_mlXKxDtFEe6b3bTu3d-UZw" labelSize="10" iconPath="/circus.robocalc.robochart.graphical/icons/provided.png" labelAlignment="LEFT" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@containerMappings[name='RoboticPlatformDefID']/@subNodeMappings[name='ProvidedID']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@containerMappings[name='RoboticPlatformDefID']/@subNodeMappings[name='ProvidedID']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_ATWL_TzzEe69u6lr9254XA" name="NumberOfWaypointsI">
+        <target xmi:type="robochart:Interface" href="remote_inpsection_model.rct#//@interfaces.4"/>
+        <semanticElements xmi:type="robochart:Interface" href="remote_inpsection_model.rct#//@interfaces.4"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_ATWL_jzzEe69u6lr9254XA" labelSize="10" iconPath="/circus.robocalc.robochart.graphical/icons/provided.png" labelAlignment="LEFT" labelPosition="node">
           <description xmi:type="style:SquareDescription" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@containerMappings[name='RoboticPlatformDefID']/@subNodeMappings[name='ProvidedID']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@containerMappings[name='RoboticPlatformDefID']/@subNodeMappings[name='ProvidedID']"/>
@@ -637,6 +649,10 @@
                 <children xmi:type="notation:Node" xmi:id="_Zqk54DtGEe6b3bTu3d-UZw" type="3010" element="_ZqjEsztGEe6b3bTu3d-UZw">
                   <styles xmi:type="notation:FontStyle" xmi:id="_Zqk54TtGEe6b3bTu3d-UZw" fontName=".AppleSystemUIFont" fontHeight="10"/>
                   <layoutConstraint xmi:type="notation:Location" xmi:id="_Zqk54jtGEe6b3bTu3d-UZw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_DeWvYDzzEe69u6lr9254XA" type="3010" element="_DeQozzzzEe69u6lr9254XA">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_DeWvYTzzEe69u6lr9254XA" fontName=".AppleSystemUIFont" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_DeWvYjzzEe69u6lr9254XA"/>
                 </children>
                 <children xmi:type="notation:Node" xmi:id="_bV82kztGEe6b3bTu3d-UZw" type="3010" element="_bV2v9jtGEe6b3bTu3d-UZw">
                   <styles xmi:type="notation:FontStyle" xmi:id="_bV82lDtGEe6b3bTu3d-UZw" fontName=".AppleSystemUIFont" fontHeight="10"/>
@@ -1173,6 +1189,14 @@
           <target xmi:type="robochart:Interface" href="remote_inpsection_model.rct#//@interfaces.3"/>
           <semanticElements xmi:type="robochart:Interface" href="remote_inpsection_model.rct#//@interfaces.3"/>
           <ownedStyle xmi:type="diagram:Square" uid="_ZqjEtDtGEe6b3bTu3d-UZw" labelSize="10" iconPath="/circus.robocalc.robochart.graphical/icons/required.png" labelAlignment="LEFT">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@containerMappings[name='RoboticPlatformDefID']/@subNodeMappings[name='RequiredID']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@containerMappings[name='RoboticPlatformDefID']/@subNodeMappings[name='RequiredID']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_DeQozzzzEe69u6lr9254XA" name="NumberOfWaypointsI">
+          <target xmi:type="robochart:Interface" href="remote_inpsection_model.rct#//@interfaces.4"/>
+          <semanticElements xmi:type="robochart:Interface" href="remote_inpsection_model.rct#//@interfaces.4"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_DeQo0DzzEe69u6lr9254XA" labelSize="10" iconPath="/circus.robocalc.robochart.graphical/icons/required.png" labelAlignment="LEFT">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@containerMappings[name='RoboticPlatformDefID']/@subNodeMappings[name='RequiredID']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@containerMappings[name='RoboticPlatformDefID']/@subNodeMappings[name='RequiredID']"/>
