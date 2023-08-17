@@ -1,0 +1,7 @@
+module RemoteInspectionModule {
+	connection rp_ref0 on radiation_level to ctrl_ref0 on radiation_level ( _async )
+	connection rp_ref0 on position to ctrl_ref0 on position ( _async )
+	rref rp_ref0 = JackalPlatform
+	cref ctrl_ref0 = RemoteInspectionController
+}
+

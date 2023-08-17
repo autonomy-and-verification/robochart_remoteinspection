@@ -1,0 +1,52 @@
+stm Agent {
+	uses ArrivedInterface uses GotoInterface uses RadiationLevelI requires InspectionInterface var RadiationBelief : DangerLevel
+	initial i0
+	state PollingPerceptsMessages {
+	}
+	state Inspect {
+	entry inspect ( )
+	}
+
+	junction j0
+
+	transition t1 {
+		from PollingPerceptsMessages
+		to PollingPerceptsMessages
+		trigger 
+	RadiationLevel ? RadiationBelief
+	}
+	transition t2 {
+		from PollingPerceptsMessages
+		to j0
+		trigger arrived ? CurrentPosition
+	}
+	transition t3 {
+		from j0
+		to Inspect
+		condition RadiationBelief == DangerLevel :: Green
+	}
+	var CurrentPosition : nat * nat
+	transition t4 {
+		from j0
+		to PollingPerceptsMessages
+		condition RadiationBelief != DangerLevel :: Green
+		action goto ! ( waypoint_inverse ( 0 ) )
+	}
+	transition t5 {
+		from j1
+		to PollingPerceptsMessages
+		action goto ! ( waypoint_inverse ( CurrentWaypoint ) )
+	}
+var CurrentWaypoint : nat
+junction j1
+	transition t6 {
+		from Inspect
+		to j1
+		action CurrentWaypoint = CurrentWaypoint + 1
+	}
+	transition t0 {
+		from i0
+		to Inspect
+	}
+}
+

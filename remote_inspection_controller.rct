@@ -1,0 +1,63 @@
+interface RadiationLevelI {
+	event RadiationLevel : DangerLevel
+}
+
+interface ArrivedInterface {
+	event arrived : nat * nat
+}
+
+interface GotoInterface {
+	event goto : nat * nat
+}
+
+enumeration DangerLevel { Red Green Orange } controller RemoteInspectionController {
+	uses RadiationSensorInterface uses LocalisationInterface requires MovementInterface requires InspectionInterface stm RaditationMontor {
+		uses RadiationSensorInterface uses RadiationLevelI var input : nat
+		initial i0
+		state s0 {
+		}
+		junction j0
+		transition t0 {
+			from i0
+			to s0
+		}
+		transition t1 {
+			from s0
+			to j0
+			trigger radiation_level ? input
+		}
+		transition t2 {
+			from j0
+			to s0
+			condition input < 30
+			action RadiationLevel ! Green
+		}
+		transition t3 {
+			from j0
+			to s0
+			condition input < 60 /\ input >= 30
+			action RadiationLevel ! DangerLevel :: Orange
+		}
+		transition t4 {
+			from j0
+			to s0
+			condition input >= 60
+			action RadiationLevel ! DangerLevel :: Red
+		}
+	}
+
+	sref stm_ref0 = NavigationStateMachine
+
+	connection RemoteInspectionController on radiation_level to RaditationMontor on radiation_level
+
+	connection RemoteInspectionController on position to stm_ref0 on position
+
+	connection RaditationMontor on RadiationLevel to stm_ref1 on RadiationLevel
+
+	connection stm_ref0 on arrived to stm_ref1 on arrived
+
+	connection stm_ref1 on goto to stm_ref0 on goto
+
+	sref stm_ref1 = Agent
+}
+

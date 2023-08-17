@@ -1,0 +1,20 @@
+interface MovementInterface {
+	move ( x : nat , y : nat )
+}
+
+interface RadiationSensorInterface {
+event radiation_level : nat
+}
+
+interface LocalisationInterface {
+event position : nat * nat
+}
+
+interface InspectionInterface {
+	inspect ( )
+}
+
+robotic platform JackalPlatform {
+	uses RadiationSensorInterface uses LocalisationInterface provides MovementInterface provides InspectionInterface }
+
+function waypoint ( coord : nat * nat ) : nat { } function waypoint_inverse ( wp : nat ) : nat * nat { }

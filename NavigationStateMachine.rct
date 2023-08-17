@@ -1,0 +1,42 @@
+stm NavigationStateMachine {
+	uses GotoInterface uses LocalisationInterface uses ArrivedInterface requires MovementInterface var GoalLocation : nat * nat
+	var CurrentPosition : nat * nat
+	initial i0
+	state stationary {
+	}
+	state Moving {
+		entry move ( GoalLocation [ 1 ] , GoalLocation [ 2 ] )
+	}
+	junction j0
+	transition t0 {
+		from i0
+		to stationary
+	}
+	transition t1 {
+		from stationary
+		to Moving
+		trigger goto ? GoalLocation
+	}
+	transition t2 {
+		from Moving
+		to j0
+		trigger position ? CurrentPosition
+	}
+	transition t3 {
+		from j0
+		to stationary
+		condition CurrentPosition == GoalLocation
+		action arrived ! GoalLocation
+	}
+	transition t4 {
+		from j0
+		to Moving
+		condition CurrentPosition != GoalLocation
+	}
+	transition t5 {
+		from Moving
+		to Moving
+		trigger goto ? GoalLocation
+	}
+}
+
