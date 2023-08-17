@@ -12,11 +12,6 @@ stm NavigationStateMachine {
 		from i0
 		to stationary
 	}
-	transition t1 {
-		from stationary
-		to Moving
-		trigger goto ? GoalLocation
-	}
 	transition t2 {
 		from Moving
 		to j0
@@ -37,6 +32,23 @@ stm NavigationStateMachine {
 		from Moving
 		to Moving
 		trigger goto ? GoalLocation
+	}
+junction j1
+	transition t1 {
+		from stationary
+		to j1
+		trigger goto ? GoalLocation
+	}
+	transition t6 {
+		from j1
+		to Moving
+		condition CurrentPosition != GoalLocation
+	}
+	transition t7 {
+		from j1
+		to stationary
+		condition CurrentPosition == GoalLocation
+		action arrived ! GoalLocation
 	}
 }
 

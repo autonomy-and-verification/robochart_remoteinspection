@@ -5,8 +5,6 @@ nametype core_nat = {0..2}
 
 -- MODULE CONSTANTS
 
--- CONTROLLER CONSTANTS
-
 -- generate waypoint
 waypoint(coord) = 0
 
@@ -18,25 +16,19 @@ nametype core_clock_type = {0..10}
 -- generate string
 nametype core_string = LSeq(Char,2)
 
--- generate const_RemoteInspectionController_number_of_waypoints
-const_RemoteInspectionController_number_of_waypoints = 0
-
--- STATEMACHINE CONSTANTS
-
 -- generate const_JackalPlatform_number_of_waypoints
 const_JackalPlatform_number_of_waypoints = 0
 
 -- CONTROLLER CONSTANTS
 
+-- generate const_RemoteInspectionController_number_of_waypoints
+const_RemoteInspectionController_number_of_waypoints = 0
+
 -- STATEMACHINE CONSTANTS
-
--- OPERATION CONSTANTS
-
--- BASIC TYPES
 
 -- generate real
 nametype core_real = union({ -2..2},{calc_type_min(Union(
-			{{0},{Plus(CurrentWaypoint, 1, core_nat)|CurrentWaypoint <- {0..2}},{1},{0},{0..2},{0..2},{0..2},{0..2},{0..2},{0..2},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{tuple2_2(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}},{0},{1},{0},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{tuple2_1(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}}}))..calc_type_max(Union({{0},{Plus(CurrentWaypoint, 1, core_nat)|CurrentWaypoint <- {0..2}},{1},{0},{0..2},{0..2},{0..2},{0..2},{0..2},{0..2},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{tuple2_2(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}},{0},{1},{0},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{tuple2_1(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}}}))}) 
+			{{0},{Plus(CurrentWaypoint, 1, core_nat)|CurrentWaypoint <- {0..2}},{1},{0},{0..2},{0..2},{0..2},{0..2},{0..2},{0..2},{tuple2_1(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}},{1},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{0},{tuple2_2(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}},{0}}))..calc_type_max(Union({{0},{Plus(CurrentWaypoint, 1, core_nat)|CurrentWaypoint <- {0..2}},{1},{0},{0..2},{0..2},{0..2},{0..2},{0..2},{0..2},{tuple2_1(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}},{1},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{0},{tuple2_2(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}},{0}}))}) 
 
 -- VECTOR TYPES AND OPERATIONS
 
@@ -48,7 +40,7 @@ waypoint_inverse(wp) = (0,0)
 
 -- generate int
 nametype core_int = union({ -2..2},{calc_type_min(Union(
-			{{0},{Plus(CurrentWaypoint, 1, core_nat)|CurrentWaypoint <- {0..2}},{1},{0},{0..2},{0..2},{0..2},{0..2},{0..2},{0..2},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{tuple2_2(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}},{0},{1},{0},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{tuple2_1(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}}}))..calc_type_max(Union({{0},{Plus(CurrentWaypoint, 1, core_nat)|CurrentWaypoint <- {0..2}},{1},{0},{0..2},{0..2},{0..2},{0..2},{0..2},{0..2},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{tuple2_2(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}},{0},{1},{0},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{tuple2_1(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}}}))})
+			{{0},{Plus(CurrentWaypoint, 1, core_nat)|CurrentWaypoint <- {0..2}},{1},{0},{0..2},{0..2},{0..2},{0..2},{0..2},{0..2},{tuple2_1(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}},{1},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{0},{tuple2_2(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}},{0}}))..calc_type_max(Union({{0},{Plus(CurrentWaypoint, 1, core_nat)|CurrentWaypoint <- {0..2}},{1},{0},{0..2},{0..2},{0..2},{0..2},{0..2},{0..2},{tuple2_1(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}},{1},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{0},{tuple2_2(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}},{0}}))})
 
 -- generate -- OPERATION BOUNDS
 

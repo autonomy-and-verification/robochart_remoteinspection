@@ -11,3 +11,77 @@ csp CheckRadiation associated to RemoteInspectionModule
 	csp-end
 
 assertion RL:RemoteInspectionModule refines CheckRadiation in the traces model
+
+//csp NavGuar associated to NavigationStateMachine
+//	csp-begin
+//		channel get_pos : coord.coord
+//		NavGuar = (LocalisationHandler(0,0) [|{|get_pos|}|] NavGuar1)\{|get_pos|}
+//	csp-end
+	
+csp LocalisationHandler associated to NavigationStateMachine
+	csp-begin
+	
+	nametype coord = {0..2}
+	
+	LocalisationHandler(x,y) =
+	NavigationStateMachine::position.in?(new_x,new_y) -> LocalisationHandler(new_x, new_y)
+	[]
+	get_pos!x!y -> LocalisationHandler(x,y)
+	csp-end
+	
+csp NavGuar1 associated to NavigationStateMachine
+	csp-begin
+	NavGuar1 =  
+		([] e: Events @ e -> NavGuar1 )
+		[]
+		(
+			NavigationStateMachine::goto.in?(x,y) -> get_pos?a?b ->
+			if a == x and b == y then
+				NavigationStateMachine::arrived.out!(x,y) -> RUN(Events)
+			else
+				RUN(Events)\{|NavigationStateMachine::arrived|}	
+		)	
+	csp-end
+	
+//assertion NavigationContract : NavigationStateMachine refines NavGuar in the traces model
+//
+//csp RmGuar associated to RemoteInspectionController 
+//csp-begin
+//
+//nametype waypointID = {0..2}
+//channel add_inspected : waypointID
+//nametype sensor_value = {0, 50, 120, 150, 250, 300}
+//datatype radiation_category = Red | Orange | Green
+//channel sensors : sensor_value
+//
+//-- removed inspect and inspected
+//RmGuar =
+//			(
+//				RemoteInspectionController::radiation_level?reading:({0, 50}) -> RemoteInspectionController::RaditationMontor::RadiationLevel.InOut!DangerLevel_Green  -> RUN(Events)
+//				[]
+//				RemoteInspectionController::radiation_level?reading:({120, 150}) -> RemoteInspectionController::RaditationMontor::RadiationLevel.InOut!DangerLevel_Orange -> RUN(Events)
+//				[]
+//				RemoteInspectionController::radiation_level?reading:({250, 300}) -> RemoteInspectionController::RaditationMontor::RadiationLevel.InOut!DangerLevel_Red -> RUN(Events)
+//				
+//			)
+//		--[|{|add_inspected|}|]
+//		--InspectedHandler({})
+//csp-end
+//
+//csp InspectedHandler associated to RemoteInspectionController
+//csp-begin
+//
+//channel inspectedCall : waypointID
+//channel inspectedRet : Bool
+//
+//InspectedHandler(inspected_waypoints) =
+//add_inspected?i -> InspectedHandler(union(inspected_waypoints, {i}) )
+//[]
+//inspectedCall?j:(inspected_waypoints) -> inspectedRet.True -> InspectedHandler(inspected_waypoints)
+//[]
+//inspectedCall?k:(diff(waypointID, inspected_waypoints)) -> inspectedRet.False -> InspectedHandler(inspected_waypoints)
+//
+//csp-end
+//
+//
+//assertion RadiationMonitorGuarantee : RemoteInspectionController refines RmGuar
