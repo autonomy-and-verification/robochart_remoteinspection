@@ -65,18 +65,18 @@ csp-begin
 -- removed inspect and inspected
 RmGuar =
 			(
-				RemoteInspectionController::radiation_level.in?reading:({0, 29}) -> RemoteInspectionController::RadiationMonitor::RadiationLevel.out!DangerLevel_Green  -> RUN(Events)
+				RemoteInspectionController::RadiationMonitor::radiation_level.in?reading:({0, 29}) -> RemoteInspectionController::RadiationMonitor::RadiationLevel.out!DangerLevel_Green  -> RUN(Events)
 				[]
-				RemoteInspectionController::radiation_level.in?reading:({30, 59}) -> RemoteInspectionController::RadiationMonitor::RadiationLevel.out!DangerLevel_Orange -> RUN(Events)
+				RemoteInspectionController::RadiationMonitor::radiation_level.in?reading:({30, 59}) -> RemoteInspectionController::RadiationMonitor::RadiationLevel.out!DangerLevel_Orange -> RUN(Events)
 				[]
-				RemoteInspectionController::radiation_level.in?reading:({60, 100}) -> RemoteInspectionController::RadiationMonitor::RadiationLevel.out!DangerLevel_Red -> RUN(Events)
+				RemoteInspectionController::RadiationMonitor::radiation_level.in?reading:({60, 100}) -> RemoteInspectionController::RadiationMonitor::RadiationLevel.out!DangerLevel_Red -> RUN(Events)
 				
 			)
 		--[|{|add_inspected|}|]
 		--InspectedHandler({})
 csp-end
 
-assertion RadiationMonitorGuarantee : RemoteInspectionController refines RmGuar
+assertion RadiationMonitorGuarantee : RemoteInspectionController::RadiationMonitor refines RmGuar in the traces model
 
 //
 //csp InspectedHandler associated to RemoteInspectionController

@@ -1,9 +1,28 @@
 -- generate nat not
 nametype core_nat = {0..2}
 
+-- generate sensor_low 
+sensor_low(input) = if (input < 30) then true else false
+
+-- generate sensor_value 
+nametype sensor_value = {0, 29, 30, 59, 60, 100}
+
+-- VECTOR TYPES AND OPERATIONS
+
+
+-- CLOCKS
+
+-- generate sensor_high
+sensor_high(input) = if (input >= 60) then true else false
+
+-- generate sensor_medium 
+sensor_medium(input) = if  ((input >= 30) and (input < 60)) then true else false
+
 -- generate --
 
 -- MODULE CONSTANTS
+
+-- CONTROLLER CONSTANTS
 
 -- generate waypoint
 waypoint(coord) = 0
@@ -16,40 +35,25 @@ nametype core_clock_type = {0..10}
 -- generate string
 nametype core_string = LSeq(Char,2)
 
--- generate const_JackalPlatform_number_of_waypoints
-const_JackalPlatform_number_of_waypoints = 0
-
--- CONTROLLER CONSTANTS
-
 -- generate const_RemoteInspectionController_number_of_waypoints
 const_RemoteInspectionController_number_of_waypoints = 0
 
 -- STATEMACHINE CONSTANTS
 
--- generate sensor_low not
-sensor_low(input) = if (input < 30) then true else false
+-- generate const_JackalPlatform_number_of_waypoints
+const_JackalPlatform_number_of_waypoints = 0
 
--- generate sensor_value not
-nametype sensor_value = {0, 29, 30, 59, 60, 100}
+-- CONTROLLER CONSTANTS
 
--- VECTOR TYPES AND OPERATIONS
-
-
--- CLOCKS
-
--- generate real
-nametype core_real = union({ -2..2},{calc_type_min(Union(
-			{{0},{Plus(CurrentWaypoint, 1, core_nat)|CurrentWaypoint <- {0..2}},{1},{0},{0..2},{0..2},{0..2},{0..2},{0..2},{1},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{0},{0},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{tuple2_1(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}},{tuple2_2(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}}}))..calc_type_max(Union({{0},{Plus(CurrentWaypoint, 1, core_nat)|CurrentWaypoint <- {0..2}},{1},{0},{0..2},{0..2},{0..2},{0..2},{0..2},{1},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{0},{0},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{tuple2_1(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}},{tuple2_2(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}}}))})
-
--- generate sensor_high not
-sensor_high(input) = if (input >= 60) then true else false
+-- generate real not
+nametype core_real = {0, 29, 30, 59, 60, 100}
 
 -- generate waypoint_inverse
 waypoint_inverse(wp) = (0,0)
 
 -- generate int
 nametype core_int = union({ -2..2},{calc_type_min(Union(
-			{{0},{Plus(CurrentWaypoint, 1, core_nat)|CurrentWaypoint <- {0..2}},{1},{0},{0..2},{0..2},{0..2},{0..2},{0..2},{1},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{0},{0},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{tuple2_1(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}},{tuple2_2(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}}}))..calc_type_max(Union({{0},{Plus(CurrentWaypoint, 1, core_nat)|CurrentWaypoint <- {0..2}},{1},{0},{0..2},{0..2},{0..2},{0..2},{0..2},{1},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{0},{0},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{tuple2_1(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}},{tuple2_2(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}}}))})
+			{{0},{Plus(CurrentWaypoint, 1, core_nat)|CurrentWaypoint <- {0..2}},{1},{0},{0..2},{0..2},{0..2},{0..2},{0..2},{0},{0},{tuple2_2(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{1},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{tuple2_1(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}}}))..calc_type_max(Union({{0},{Plus(CurrentWaypoint, 1, core_nat)|CurrentWaypoint <- {0..2}},{1},{0},{0..2},{0..2},{0..2},{0..2},{0..2},{0},{0},{tuple2_2(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{1},{CurrentWaypoint|CurrentWaypoint <- {0..2}},{tuple2_1(GoalLocation)|GoalLocation <- {(x0__,x1__) | x0__ <- core_nat,x1__ <- core_nat}}}))})
 
 -- generate -- OPERATION BOUNDS
 
@@ -62,10 +66,6 @@ nametype core_int = union({ -2..2},{calc_type_min(Union(
 -- OPERATION CONSTANTS
 
 -- BASIC TYPES
-
--- generate sensor_medium not
-sensor_medium(input) = if  ((input >= 30) and (input < 60)) then true else false
-
 
 -- generate Div
 Div(e1,e2,T) = if member(e1/e2,T) then e1/e2 else e1

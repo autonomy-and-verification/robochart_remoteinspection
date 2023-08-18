@@ -12,7 +12,7 @@ interface GotoInterface {
 
 enumeration DangerLevel { Red Green Orange } controller RemoteInspectionController {
 	uses RadiationSensorInterface uses LocalisationInterface requires MovementInterface requires InspectionInterface stm RadiationMonitor {
-		uses RadiationSensorInterface uses RadiationLevelI var input : sensor_value
+		uses RadiationSensorInterface uses RadiationLevelI var input : real
 		initial i0
 		state s0 {
 		}
@@ -25,24 +25,25 @@ enumeration DangerLevel { Red Green Orange } controller RemoteInspectionControll
 			from s0
 			to j0
 			trigger 
+		
 		radiation_level ? input
 		}
 		transition t2 {
 			from j0
 			to s0
-			condition sensor_low ( input )
+			condition input < 30
 			action RadiationLevel ! DangerLevel :: Green
 		}
 		transition t3 {
 			from j0
 			to s0
-			condition sensor_medium ( input )
+			condition input >= 30 /\ input < 60
 			action RadiationLevel ! DangerLevel :: Orange
 		}
 		transition t4 {
 			from j0
 			to s0
-			condition sensor_high ( input )
+			condition input >= 60
 			action RadiationLevel ! DangerLevel :: Red
 		}
 	}

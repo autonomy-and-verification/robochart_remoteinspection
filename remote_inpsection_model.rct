@@ -3,7 +3,7 @@ interface MovementInterface {
 }
 
 interface RadiationSensorInterface {
-event radiation_level : nat
+	event radiation_level : real
 }
 
 interface LocalisationInterface {
@@ -20,5 +20,7 @@ interface NumberOfWaypointsI {
 
 robotic platform JackalPlatform {
 	uses RadiationSensorInterface uses LocalisationInterface provides MovementInterface provides InspectionInterface provides NumberOfWaypointsI }
+
+type sensor_value
 
 function waypoint ( coord : nat * nat ) : nat { } function waypoint_inverse ( wp : nat ) : nat * nat { }

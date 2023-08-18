@@ -15,15 +15,15 @@
     <semanticResources>main.assertions</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_1kdrgDs-Ee6_DvmQ3bgp_w">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_miGbYDtFEe6b3bTu3d-UZw" name="remote_inpsection_model.rct" repPath="#_miEmMDtFEe6b3bTu3d-UZw" changeId="36af816a-11ee-4f04-855f-3505700b343a">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_miGbYDtFEe6b3bTu3d-UZw" name="remote_inpsection_model.rct" repPath="#_miEmMDtFEe6b3bTu3d-UZw" changeId="9505907a-f3b2-4d6a-b0c3-e663e633e4ce">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']"/>
         <target xmi:type="robochart:RCPackage" href="remote_inpsection_model.rct#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_MvcgMDtGEe6b3bTu3d-UZw" name="remote_inspection_controller" repPath="#_Mvb5IDtGEe6b3bTu3d-UZw" changeId="4d761dcd-b38c-4656-8a4b-aea5bd5961c5">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_MvcgMDtGEe6b3bTu3d-UZw" name="remote_inspection_controller" repPath="#_Mvb5IDtGEe6b3bTu3d-UZw" changeId="b515f81c-5268-4035-98c0-aada117df8fa">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']"/>
         <target xmi:type="robochart:RCPackage" href="remote_inspection_controller.rct#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_XsbDwDtJEe6b3bTu3d-UZw" name="remote_inspection_module" repPath="#_XsacsDtJEe6b3bTu3d-UZw" changeId="90247b49-d965-4109-99ab-6b2a5e77629a">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_XsbDwDtJEe6b3bTu3d-UZw" name="remote_inspection_module" repPath="#_XsacsDtJEe6b3bTu3d-UZw" changeId="96d8c640-ce29-4985-8aa0-236643ac32b7">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']"/>
         <target xmi:type="robochart:RCPackage" href="remote_inspection_module.rct#/"/>
       </ownedRepresentationDescriptors>
@@ -229,7 +229,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@containerMappings[name='InterfaceID']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@containerMappings[name='InterfaceID']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_wWnCYTtFEe6b3bTu3d-UZw" name="radiation_level: sensor_value">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_wWnCYTtFEe6b3bTu3d-UZw" name="radiation_level: real">
         <target xmi:type="robochart:Event" href="remote_inpsection_model.rct#//@interfaces.1/@events.0"/>
         <semanticElements xmi:type="robochart:Event" href="remote_inpsection_model.rct#//@interfaces.1/@events.0"/>
         <ownedStyle xmi:type="diagram:Square" uid="_wWnCYjtFEe6b3bTu3d-UZw" labelSize="10" iconPath="/circus.robocalc.robochart.graphical/icons/flash.png" labelAlignment="LEFT" labelPosition="node">
@@ -279,7 +279,7 @@
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_mlWjsjtFEe6b3bTu3d-UZw" name="JackalPlatform" width="10">
       <target xmi:type="robochart:RoboticPlatformDef" href="remote_inpsection_model.rct#//@robots.0"/>
       <semanticElements xmi:type="robochart:RoboticPlatformDef" href="remote_inpsection_model.rct#//@robots.0"/>
-      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_wWqFsDtFEe6b3bTu3d-UZw" name="radiation_level: sensor_value" width="3" height="3">
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_wWqFsDtFEe6b3bTu3d-UZw" name="radiation_level: real" width="3" height="3">
         <target xmi:type="robochart:Event" href="remote_inpsection_model.rct#//@interfaces.1/@events.0"/>
         <semanticElements xmi:type="robochart:Event" href="remote_inpsection_model.rct#//@interfaces.1/@events.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -431,7 +431,7 @@
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bV82kjtGEe6b3bTu3d-UZw"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_bV4lITtGEe6b3bTu3d-UZw" fontName=".AppleSystemUIFont" fontHeight="10"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bV4lIjtGEe6b3bTu3d-UZw" x="-22" y="179" width="30" height="30"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bV4lIjtGEe6b3bTu3d-UZw" x="-22" y="200" width="30" height="30"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_ctM9YDtGEe6b3bTu3d-UZw" type="3012" element="_ctKhJDtGEe6b3bTu3d-UZw">
             <children xmi:type="notation:Node" xmi:id="_ctM9YztGEe6b3bTu3d-UZw" type="5010">
@@ -459,7 +459,7 @@
                       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oSAdUjtGEe6b3bTu3d-UZw"/>
                     </children>
                     <styles xmi:type="notation:ShapeStyle" xmi:id="_oR-BETtGEe6b3bTu3d-UZw" fontName=".AppleSystemUIFont" fontHeight="10"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oR-BEjtGEe6b3bTu3d-UZw" x="-22" y="76" width="30" height="30"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oR-BEjtGEe6b3bTu3d-UZw" x="-22" y="88" width="30" height="30"/>
                   </children>
                   <children xmi:type="notation:Node" xmi:id="_tPa9EDtHEe6b3bTu3d-UZw" type="3012" element="_tPX50ztHEe6b3bTu3d-UZw">
                     <children xmi:type="notation:Node" xmi:id="_tPbkIDtHEe6b3bTu3d-UZw" type="5010">
@@ -546,9 +546,9 @@
                           <styles xmi:type="notation:FontStyle" xmi:id="_tPhDsTtHEe6b3bTu3d-UZw" fontName=".AppleSystemUIFont" fontHeight="10"/>
                           <layoutConstraint xmi:type="notation:Location" xmi:id="_tPhDsjtHEe6b3bTu3d-UZw"/>
                         </children>
-                        <children xmi:type="notation:Node" xmi:id="_xVE2wD2rEe6aqLTuLa2yew" type="3010" element="_xU-JJT2rEe6aqLTuLa2yew">
-                          <styles xmi:type="notation:FontStyle" xmi:id="_xVE2wT2rEe6aqLTuLa2yew" fontName=".AppleSystemUIFont" fontHeight="10"/>
-                          <layoutConstraint xmi:type="notation:Location" xmi:id="_xVE2wj2rEe6aqLTuLa2yew"/>
+                        <children xmi:type="notation:Node" xmi:id="_BIBLQD3REe61gJz4Ntt8eg" type="3010" element="_BHkfUD3REe61gJz4Ntt8eg">
+                          <styles xmi:type="notation:FontStyle" xmi:id="_BIBLQT3REe61gJz4Ntt8eg" fontName=".AppleSystemUIFont" fontHeight="10"/>
+                          <layoutConstraint xmi:type="notation:Location" xmi:id="_BIBLQj3REe61gJz4Ntt8eg"/>
                         </children>
                         <styles xmi:type="notation:SortingStyle" xmi:id="_oSBEZTtGEe6b3bTu3d-UZw"/>
                         <styles xmi:type="notation:FilteringStyle" xmi:id="_oSBEZjtGEe6b3bTu3d-UZw"/>
@@ -864,17 +864,17 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_cMbZUDtLEe6b3bTu3d-UZw" type="4001" element="_cMaLQDtLEe6b3bTu3d-UZw" source="_bV4lIDtGEe6b3bTu3d-UZw" target="_oR-BEDtGEe6b3bTu3d-UZw">
           <children xmi:type="notation:Node" xmi:id="_cMbZVDtLEe6b3bTu3d-UZw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cMbZVTtLEe6b3bTu3d-UZw" x="4" y="4"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cMbZVTtLEe6b3bTu3d-UZw" x="-4" y="-4"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_cMbZVjtLEe6b3bTu3d-UZw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cMbZVztLEe6b3bTu3d-UZw" x="11" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cMbZVztLEe6b3bTu3d-UZw" x="13" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_cMbZWDtLEe6b3bTu3d-UZw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cMbZWTtLEe6b3bTu3d-UZw" x="-10" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cMbZWTtLEe6b3bTu3d-UZw" x="-11" y="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_cMbZUTtLEe6b3bTu3d-UZw" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_cMbZUjtLEe6b3bTu3d-UZw" fontName=".AppleSystemUIFont" fontHeight="10" italic="true"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_cMbZUztLEe6b3bTu3d-UZw" points="[13, 3, -127, -14]$[69, 3, -71, -14]$[69, 12, -71, -5]$[125, 12, -15, -5]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_cMbZUztLEe6b3bTu3d-UZw" points="[14, 3, -126, -5]$[125, 3, -15, -5]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cMcAYDtLEe6b3bTu3d-UZw" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cMcAYTtLEe6b3bTu3d-UZw" id="(0.5,0.5)"/>
         </edges>
@@ -959,7 +959,7 @@
     <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_RoqR4DtGEe6b3bTu3d-UZw" name="RemoteInspectionController" childrenPresentation="VerticalStack">
       <target xmi:type="robochart:ControllerDef" href="remote_inspection_controller.rct#//@controllers.0"/>
       <semanticElements xmi:type="robochart:ControllerDef" href="remote_inspection_controller.rct#//@controllers.0"/>
-      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_bVvbMztGEe6b3bTu3d-UZw" name="radiation_level: sensor_value" outgoingEdges="_cMaLQDtLEe6b3bTu3d-UZw" width="3" height="3">
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_bVvbMztGEe6b3bTu3d-UZw" name="radiation_level: real" outgoingEdges="_cMaLQDtLEe6b3bTu3d-UZw" width="3" height="3">
         <target xmi:type="robochart:Event" href="remote_inpsection_model.rct#//@interfaces.1/@events.0"/>
         <semanticElements xmi:type="robochart:Event" href="remote_inpsection_model.rct#//@interfaces.1/@events.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -999,7 +999,7 @@
         <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_ffdCkDtGEe6b3bTu3d-UZw" name="RadiationMonitor" childrenPresentation="VerticalStack">
           <target xmi:type="robochart:StateMachineDef" href="remote_inspection_controller.rct#//@controllers.0/@machines.0"/>
           <semanticElements xmi:type="robochart:StateMachineDef" href="remote_inspection_controller.rct#//@controllers.0/@machines.0"/>
-          <ownedBorderedNodes xmi:type="diagram:DNode" uid="_oR36fDtGEe6b3bTu3d-UZw" name="radiation_level: sensor_value" incomingEdges="_cMaLQDtLEe6b3bTu3d-UZw" width="3" height="3">
+          <ownedBorderedNodes xmi:type="diagram:DNode" uid="_oR36fDtGEe6b3bTu3d-UZw" name="radiation_level: real" incomingEdges="_cMaLQDtLEe6b3bTu3d-UZw" width="3" height="3">
             <target xmi:type="robochart:Event" href="remote_inpsection_model.rct#//@interfaces.1/@events.0"/>
             <semanticElements xmi:type="robochart:Event" href="remote_inpsection_model.rct#//@interfaces.1/@events.0"/>
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1114,10 +1114,10 @@
               </ownedStyle>
               <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@containerMappings[name='RoboticPlatformDefID']/@subNodeMappings[name='UsedID']"/>
             </ownedElements>
-            <ownedElements xmi:type="diagram:DNodeListElement" uid="_xU-JJT2rEe6aqLTuLa2yew" name="input: sensor_value">
+            <ownedElements xmi:type="diagram:DNodeListElement" uid="_BHkfUD3REe61gJz4Ntt8eg" name="input: real">
               <target xmi:type="robochart:VariableList" href="remote_inspection_controller.rct#//@controllers.0/@machines.0/@variableList.0"/>
               <semanticElements xmi:type="robochart:VariableList" href="remote_inspection_controller.rct#//@controllers.0/@machines.0/@variableList.0"/>
-              <ownedStyle xmi:type="diagram:Square" uid="_xU-wID2rEe6aqLTuLa2yew" labelSize="10" iconPath="/circus.robocalc.robochart.graphical/icons/variable.png" labelAlignment="LEFT" labelPosition="node">
+              <ownedStyle xmi:type="diagram:Square" uid="_BHlGYD3REe61gJz4Ntt8eg" labelSize="10" iconPath="/circus.robocalc.robochart.graphical/icons/variable.png" labelAlignment="LEFT" labelPosition="node">
                 <description xmi:type="style:SquareDescription" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@containerMappings[name='InterfaceID']/@subNodeMappings[name='VariableID']/@conditionnalStyles.0/@style"/>
               </ownedStyle>
               <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@containerMappings[name='InterfaceID']/@subNodeMappings[name='VariableID']"/>
@@ -1375,7 +1375,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@edgeMappings[name='TransitionID']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_jW5RcDtKEe6b3bTu3d-UZw" name="[sensor_low(input)]/RadiationLevel!DangerLevel::Green" sourceNode="_W_WF4DtKEe6b3bTu3d-UZw" targetNode="_zqeKYDtGEe6b3bTu3d-UZw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_jW5RcDtKEe6b3bTu3d-UZw" name="[input&lt;30]/RadiationLevel!DangerLevel::Green" sourceNode="_W_WF4DtKEe6b3bTu3d-UZw" targetNode="_zqeKYDtGEe6b3bTu3d-UZw">
       <target xmi:type="robochart:Transition" href="remote_inspection_controller.rct#//@controllers.0/@machines.0/@transitions.2"/>
       <semanticElements xmi:type="robochart:Transition" href="remote_inspection_controller.rct#//@controllers.0/@machines.0/@transitions.2"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_jW5RcTtKEe6b3bTu3d-UZw" size="2" routingStyle="manhattan">
@@ -1384,7 +1384,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@edgeMappings[name='TransitionID']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_t54vDDtKEe6b3bTu3d-UZw" name="[sensor_medium(input)]/RadiationLevel!DangerLevel::Orange" sourceNode="_W_WF4DtKEe6b3bTu3d-UZw" targetNode="_zqeKYDtGEe6b3bTu3d-UZw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_t54vDDtKEe6b3bTu3d-UZw" name="[input>=30/\input&lt;60]/RadiationLevel!DangerLevel::Orange" sourceNode="_W_WF4DtKEe6b3bTu3d-UZw" targetNode="_zqeKYDtGEe6b3bTu3d-UZw">
       <target xmi:type="robochart:Transition" href="remote_inspection_controller.rct#//@controllers.0/@machines.0/@transitions.3"/>
       <semanticElements xmi:type="robochart:Transition" href="remote_inspection_controller.rct#//@controllers.0/@machines.0/@transitions.3"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_t54vDTtKEe6b3bTu3d-UZw" size="2" routingStyle="manhattan">
@@ -1393,7 +1393,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/circus.robocalc.robochart.graphical/description/robochart.odesign#//@ownedViewpoints[name='RoboChartID']/@ownedRepresentations[name='SpecificationID']/@defaultLayer/@edgeMappings[name='TransitionID']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_5AQmmDtKEe6b3bTu3d-UZw" name="[sensor_high(input)]/RadiationLevel!DangerLevel::Red" sourceNode="_W_WF4DtKEe6b3bTu3d-UZw" targetNode="_zqeKYDtGEe6b3bTu3d-UZw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_5AQmmDtKEe6b3bTu3d-UZw" name="[input>=60]/RadiationLevel!DangerLevel::Red" sourceNode="_W_WF4DtKEe6b3bTu3d-UZw" targetNode="_zqeKYDtGEe6b3bTu3d-UZw">
       <target xmi:type="robochart:Transition" href="remote_inspection_controller.rct#//@controllers.0/@machines.0/@transitions.4"/>
       <semanticElements xmi:type="robochart:Transition" href="remote_inspection_controller.rct#//@controllers.0/@machines.0/@transitions.4"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_5ARNkDtKEe6b3bTu3d-UZw" size="2" routingStyle="manhattan">
@@ -1662,7 +1662,6 @@
           <semanticElements xmi:type="robochart:RoboticPlatformRef" href="remote_inspection_module.rct#//@modules.0/@nodes.0"/>
           <ownedBorderedNodes xmi:type="diagram:DNode" uid="_p4mgWTtJEe6b3bTu3d-UZw" name="radiation_level: sensor_value" outgoingEdges="_zYWYQDtJEe6b3bTu3d-UZw" width="3" height="3">
             <target xmi:type="robochart:Event" href="remote_inpsection_model.rct#//@interfaces.1/@events.0"/>
-            <semanticElements xmi:type="robochart:Event" href="remote_inpsection_model.rct#//@interfaces.1/@events.0"/>
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1696,7 +1695,6 @@
           <semanticElements xmi:type="robochart:ControllerRef" href="remote_inspection_module.rct#//@modules.0/@nodes.1"/>
           <ownedBorderedNodes xmi:type="diagram:DNode" uid="_wC44WTtJEe6b3bTu3d-UZw" name="radiation_level: sensor_value" incomingEdges="_zYWYQDtJEe6b3bTu3d-UZw" width="3" height="3">
             <target xmi:type="robochart:Event" href="remote_inpsection_model.rct#//@interfaces.1/@events.0"/>
-            <semanticElements xmi:type="robochart:Event" href="remote_inpsection_model.rct#//@interfaces.1/@events.0"/>
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
