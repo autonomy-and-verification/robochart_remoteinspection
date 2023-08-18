@@ -12,61 +12,72 @@ csp CheckRadiation associated to RemoteInspectionModule
 
 assertion RL:RemoteInspectionModule refines CheckRadiation in the traces model
 
+//csp RadiationMonitorSanity associated to RemoteInspectionController::RadiationMonitor
+//	csp-begin
+//		GivesOutput = RemoteInspectionController::RadiationMonitor::radiation_level.in?x -> RemoteInspectionController::RadiationMonitor::RadiationLevel.InOut!y -> RUN(Events)
+//	csp-end
+	
+//assertion RM_Simple: RemoteInspectionController::RadiationMonitor refines RadiationMonitorSanity in the traces model
+
 //csp NavGuar associated to NavigationStateMachine
 //	csp-begin
 //		channel get_pos : coord.coord
 //		NavGuar = (LocalisationHandler(0,0) [|{|get_pos|}|] NavGuar1)\{|get_pos|}
 //	csp-end
 	
-csp LocalisationHandler associated to NavigationStateMachine
-	csp-begin
+//	csp LocalisationHandler associated to NavigationStateMachine
+//		csp-begin
 	
-	nametype coord = {0..2}
+//		nametype coord = {0..2}
 	
-	LocalisationHandler(x,y) =
-	NavigationStateMachine::position.in?(new_x,new_y) -> LocalisationHandler(new_x, new_y)
-	[]
-	get_pos!x!y -> LocalisationHandler(x,y)
-	csp-end
+//		LocalisationHandler(x,y) =
+//		NavigationStateMachine::position.in?(new_x,new_y) -> LocalisationHandler(new_x, new_y)
+//		[]
+//		get_pos!x!y -> LocalisationHandler(x,y)
+//		csp-end
 	
-csp NavGuar1 associated to NavigationStateMachine
-	csp-begin
-	NavGuar1 =  
-		([] e: Events @ e -> NavGuar1 )
-		[]
-		(
-			NavigationStateMachine::goto.in?(x,y) -> get_pos?a?b ->
-			if a == x and b == y then
-				NavigationStateMachine::arrived.out!(x,y) -> RUN(Events)
-			else
-				RUN(Events)\{|NavigationStateMachine::arrived|}	
-		)	
-	csp-end
+//	csp NavGuar1 associated to NavigationStateMachine
+//		csp-begin
+//		NavGuar1 =  
+//			([] e: Events @ e -> NavGuar1 )
+//			[]
+//			(
+//				NavigationStateMachine::goto.in?(x,y) -> get_pos?a?b ->
+//				if a == x and b == y then
+//					NavigationStateMachine::arrived.out!(x,y) -> RUN(Events)
+//				else
+//					RUN(Events)\{|NavigationStateMachine::arrived|}	
+//			)	
+//		csp-end
 	
 //assertion NavigationContract : NavigationStateMachine refines NavGuar in the traces model
 //
-//csp RmGuar associated to RemoteInspectionController 
-//csp-begin
-//
-//nametype waypointID = {0..2}
-//channel add_inspected : waypointID
-//nametype sensor_value = {0, 50, 120, 150, 250, 300}
-//datatype radiation_category = Red | Orange | Green
-//channel sensors : sensor_value
-//
-//-- removed inspect and inspected
-//RmGuar =
-//			(
-//				RemoteInspectionController::radiation_level?reading:({0, 50}) -> RemoteInspectionController::RaditationMontor::RadiationLevel.InOut!DangerLevel_Green  -> RUN(Events)
-//				[]
-//				RemoteInspectionController::radiation_level?reading:({120, 150}) -> RemoteInspectionController::RaditationMontor::RadiationLevel.InOut!DangerLevel_Orange -> RUN(Events)
-//				[]
-//				RemoteInspectionController::radiation_level?reading:({250, 300}) -> RemoteInspectionController::RaditationMontor::RadiationLevel.InOut!DangerLevel_Red -> RUN(Events)
-//				
-//			)
-//		--[|{|add_inspected|}|]
-//		--InspectedHandler({})
-//csp-end
+csp RmGuar associated to RemoteInspectionController 
+csp-begin
+
+-- nametype waypointID = {0..2}
+-- channel add_inspected : waypointID
+-- nametype sensor_value = {0, 30, 31, 60, 61, 100}
+-- datatype radiation_category = Red | Orange | Green
+-- channel sensors : sensor_value
+-- constant number_of_waypoints = 2
+
+-- removed inspect and inspected
+RmGuar =
+			(
+				RemoteInspectionController::radiation_level.in?reading:({0, 29}) -> RemoteInspectionController::RadiationMonitor::RadiationLevel.out!DangerLevel_Green  -> RUN(Events)
+				[]
+				RemoteInspectionController::radiation_level.in?reading:({30, 59}) -> RemoteInspectionController::RadiationMonitor::RadiationLevel.out!DangerLevel_Orange -> RUN(Events)
+				[]
+				RemoteInspectionController::radiation_level.in?reading:({60, 100}) -> RemoteInspectionController::RadiationMonitor::RadiationLevel.out!DangerLevel_Red -> RUN(Events)
+				
+			)
+		--[|{|add_inspected|}|]
+		--InspectedHandler({})
+csp-end
+
+assertion RadiationMonitorGuarantee : RemoteInspectionController refines RmGuar
+
 //
 //csp InspectedHandler associated to RemoteInspectionController
 //csp-begin
@@ -84,4 +95,3 @@ csp NavGuar1 associated to NavigationStateMachine
 //csp-end
 //
 //
-//assertion RadiationMonitorGuarantee : RemoteInspectionController refines RmGuar
