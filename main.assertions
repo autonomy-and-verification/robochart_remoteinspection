@@ -12,12 +12,6 @@ csp CheckRadiation associated to RemoteInspectionModule
 
 assertion RL:RemoteInspectionModule refines CheckRadiation in the traces model
 
-//csp RadiationMonitorSanity associated to RemoteInspectionController::RadiationMonitor
-//	csp-begin
-//		GivesOutput = RemoteInspectionController::RadiationMonitor::radiation_level.in?x -> RemoteInspectionController::RadiationMonitor::RadiationLevel.InOut!y -> RUN(Events)
-//	csp-end
-	
-//assertion RM_Simple: RemoteInspectionController::RadiationMonitor refines RadiationMonitorSanity in the traces model
 
 //csp NavGuar associated to NavigationStateMachine
 //	csp-begin
